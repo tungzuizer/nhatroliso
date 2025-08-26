@@ -1,11 +1,543 @@
-<!doctype html>
-<html lang="vi">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Nhà trọ LISO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhà trọ LISO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('IMG_3516.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .amenity-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .amenity-icon:hover {
+            transform: scale(1.1);
+            color: #3b82f6;
+        }
+        
+        .room-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
-<body>
-  <h1>Xin chào</h1>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-home text-blue-500 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-gray-800">Nhà trọ LISO</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-800 hover:text-blue-500 px-3 py-2 font-medium">Home</a>
+                    <a href="#about" class="text-gray-800 hover:text-blue-500 px-3 py-2 font-medium">About</a>
+                    <a href="#rooms" class="text-gray-800 hover:text-blue-500 px-3 py-2 font-medium">Rooms</a>
+                    <a href="#amenities" class="text-gray-800 hover:text-blue-500 px-3 py-2 font-medium">Amenities</a>
+                    <a href="#contact" class="text-gray-800 hover:text-blue-500 px-3 py-2 font-medium">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-700 hover:text-blue-500 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-blue-500">Trang chủ</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-blue-500">Giới thiệu</a>
+                <a href="#rooms" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-blue-500">Phòng</a>
+                <a href="#amenities" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-blue-500">Tiện nghi</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-blue-500">Liên hệ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:w-2/3 lg:w-1/2">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Ngôi nhà trọ của bạn đang tìm</h1>
+                <p class="text-lg md:text-xl mb-8">Trải nghiệm sự thoải mái, tiện lợi và cộng đồng tại nhà trọ của chúng tôi. Giá cả phải chăng với các tiện nghi.</p>
+                <a href="#register" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">Đăng ký ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Giới thiệu về Nhà trọ LISO</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src='IMG_3519.JPG' alt="Boarding House" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Một không gian sống thoải mái</h3>
+                    <p class="text-gray-600 mb-4">Nhà trọ LISO đã cung cấp chỗ ở chất lượng cho sinh viên và người đi làm kể từ năm 2023. Sứ mệnh của chúng tôi là tạo ra một môi trường an toàn, thoải mái và thân thiện cho tất cả cư dân.</p>
+                    <p class="text-gray-600 mb-6">Nằm trong một khu phố yên tĩnh với giao thông công cộng thuận tiện, trường học và khu vực kinh doanh, chúng tôi cung cấp sự cân bằng hoàn hảo giữa tiện nghi và sự yên tĩnh.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span class="text-gray-700">Bảo vệ 24/7</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span class="text-gray-700">WiFi miễn phí</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span class="text-gray-700">Dịch vụ giặt là</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span class="text-gray-700">Chỗ đậu xe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Các loại phòng của chúng tôi</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Chúng tôi cung cấp nhiều loại phòng khác nhau để phù hợp với nhu cầu và ngân sách khác nhau. Tất cả các phòng đều được trang bị nội thất cơ bản và có quyền truy cập vào các khu vực chung.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+    <!-- Room 1 -->
+    <div class="bg-white rounded-lg overflow-hidden shadow-md room-card transition duration-300">
+        <img src='IMG_3521.jpg' alt="Single Room" class="w-full h-48 object-cover">
+        <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Phòng đơn</h3>
+            <p class="text-gray-600 mb-4">Không gian riêng tư hoàn hảo cho những ai thích sự tĩnh lặng.</p>
+            <div class="flex justify-between items-center">
+                <span class="text-blue-500 font-bold">1.200.000/tháng</span>
+                <a href="#register" class="text-blue-500 hover:text-blue-600 font-medium">Đặt ngay</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room 2 -->
+    <div class="bg-white rounded-lg overflow-hidden shadow-md room-card transition duration-300">
+        <img src='IMG_3523.jpg' alt="Shared Room" class="w-full h-48 object-cover">
+        <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Phòng chung</h3>
+            <p class="text-gray-600 mb-4">Lựa chọn tiết kiệm với 2-3 bạn cùng phòng, tuyệt vời để kết bạn.</p>
+            <div class="flex justify-between items-center">
+                <span class="text-blue-500 font-bold">1.200.000/tháng</span>
+                <a href="#register" class="text-blue-500 hover:text-blue-600 font-medium">Đặt ngay</a>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Tiện nghi của chúng tôi</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Chúng tôi cung cấp mọi thứ bạn cần để sống thoải mái và học tập hiệu quả.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="amenity-icon text-4xl text-gray-700 mb-4">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">WiFi tốc độ cao</h3>
+                    <p class="text-gray-600">Truy cập internet không giới hạn trên toàn bộ khuôn viên</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="amenity-icon text-4xl text-gray-700 mb-4">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Khu vực bếp</h3>
+                    <p class="text-gray-600">Có khu vực để bếp và nấu ăn</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="amenity-icon text-4xl text-gray-700 mb-4">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Dịch vụ giặt là</h3>
+                    <p class="text-gray-600">Có sẵn các tiện nghi giặt là xung quanh</p>
+                </div>
+
+
+                <div class="text-center">
+                       <div class="amenity-icon text-4xl text-gray-700 mb-4">
+                        <i class="fas fa-water"></i> 
+                        </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Khu vực bờ hồ</h3>
+                     <p class="text-gray-600">Có hồ ở gần để đi bộ vào sáng sớm hoặc chiều tối</p>
+                      </div>
+
+                
+                <div class="text-center">
+                    <div class="amenity-icon text-4xl text-gray-700 mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Bảo mật 24/7</h3>
+                    <p class="text-gray-600">Hệ thống CCTV </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="amenity-icon text-4xl text-gray-700 mb-4">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Chỗ đậu xe</h3>
+                    <p class="text-gray-600">Bãi đậu xe an toàn cho cư dân ( có khóa bảo mật bằng vân tay )</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="amenity-icon text-4xl text-gray-700 mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Khu vực sinh hoạt </h3>
+                    <p class="text-gray-600">Không khí xung quanh trong lành thoáng mát</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="amenity-icon text-4xl text-gray-700 mb-4">
+                        <i class="fas fa-bicycle"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Khu vực để xe đạp</h3>
+                    <p class="text-gray-600">Chỗ đậu xe đạp an toàn( có khóa bảo mật bằng vân tay ) </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Những gì cư dân của chúng tôi nói</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                       <img src="https://lh3.googleusercontent.com/a-/ALV-UjXCtpxmUsbZh2JgQRjyT-G1qZaLJ3_13lcofXJn6khIk5jT6S1o=w90-h90-p-rp-mo-br100"
+     alt="Ngọc Vũ"
+     class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Ngọc Vũ</h4>
+                            <p class="text-gray-600 text-sm">1 năm</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Phòng đẹp, thoáng, giá cả hợp lí, chủ nhà dễ tính, an ninh tốt"</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <img src="https://lh3.googleusercontent.com/a/ACg8ocICAKhEoHniT-4pPquhqS_KaW2VuZSvPeBEUNsbBHZQX8EZ0qg=w90-h90-p-rp-mo-br100" alt="Michael T." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Doanh Hán</h4>
+                            <p class="text-gray-600 text-sm">1 năm</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Giá cả hợp lý rẻ"</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <img
+  src="https://lh3.googleusercontent.com/a/ACg8ocJgaiJkJl1NgmXVzoIlZOYg81ZZVjL2240zB7pWdxw-HwabcQ=w90-h90-p-rp-mo-ba2-br100"
+  alt="Ngọc Vũ"
+  class="w-12 h-12 rounded-full mr-4">
+
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Hung nguyen van.</h4>
+                            <p class="text-gray-600 text-sm">6 tháng</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Nhiều phòng, giá hợp lý"</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section id="register" class="py-16 bg-blue-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-blue-500 text-white p-8 md:p-12">
+                        <h2 class="text-2xl font-bold mb-4">Đăng ký sự quan tâm của bạn</h2>
+                        <p class="mb-6">Vui lòng điền vào mẫu này để kiểm tra tình trạng phòng trống và lên lịch xem nhà. Quản lý của chúng tôi sẽ liên hệ với bạn trong vòng 24 giờ.</p>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>0376336788</span>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>tunghb2007@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            <span>99 D. Vực Giang, Thôn 4, Thạch Thất, Hà Nội</span>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6">Phiếu đăng ký</h3>
+                        <form action="https://formspree.io/f/mzzapqlw" method="POST" class="space-y-4">
+    <div>
+        <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Họ và tên đầy đủ</label>
+        <input type="text" id="fullName" name="fullName" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+    </div>
+    <div>
+        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Số điện thoại</label>
+        <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+    </div>
+    <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email (Optional)</label>
+        <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+    </div>
+    <div>
+        <label for="roomType" class="block text-sm font-medium text-gray-700 mb-1">Loại phòng ưa thích</label>
+        <select id="roomType" name="roomType" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="single">Phòng đơn</option>
+            <option value="shared">Phòng chung</option>
+            <option value="notsure">Chưa chắc chắn</option>
+        </select>
+    </div>
+    <div>
+        <label for="moveInDate" class="block text-sm font-medium text-gray-700 mb-1">Ngày chuyển đến dự kiến</label>
+        <input type="date" id="moveInDate" name="moveInDate" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+    </div>
+
+    <!-- hidden redirect nếu muốn -->
+    <input type="hidden" name="_redirect" value="https://yourwebsite.com/thank-you.html">
+
+    <div class="pt-2">
+        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md transition duration-300">Submit Registration</button>
+    </div>
+</form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Bạn có thắc mắc? Chúng tôi luôn sẵn sàng hỗ trợ. Hãy liên hệ với chúng tôi qua bất kỳ kênh nào sau đây.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                    <div class="text-blue-500 text-3xl mb-4">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Phone</h3>
+                    <p class="text-gray-600 mb-2"> 0376336788</p>
+                    <p class="text-gray-500 text-sm">Thứ Hai - Chủ Nhật</p>
+                </div>
+                
+                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                    <div class="text-blue-500 text-3xl mb-4">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Email</h3>
+                    <p class="text-gray-600 mb-2">tunghb2007@gmail.com</p>
+                    <p class="text-gray-500 text-sm">Phản hồi trong vòng 24 giờ</p>
+                </div>
+                
+                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                    <div class="text-blue-500 text-3xl mb-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Visit Us</h3>
+                    <p class="text-gray-600 mb-2">99 D. Vực Giang, Thôn 4, Thạch Thất, Hà Nội</p>
+                    <p class="text-gray-500 text-sm">Việt Nam, thành phố Hà Nội</p>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3724.902754324193!2d105.5534072!3d20.9965349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345b1001fa8101%3A0x62e6f30094b4f55c!2zTmjDoCBUcuG7jSBMaXNv!5e0!3m2!1svi!2s!4v1756126304950!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg shadow-lg"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Comfort Haven</h3>
+                    <p class="text-gray-400">Cung cấp chỗ ở nhà trọ chất lượng từ năm 2023. Sự thoải mái của bạn là ưu tiên hàng đầu của chúng tôi.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#rooms" class="text-gray-400 hover:text-white transition">Rooms</a></li>
+                        <li><a href="#amenities" class="text-gray-400 hover:text-white transition">Amenities</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <address class="text-gray-400 not-italic">
+                        <p class="mb-2">Việt Nam, thành phố Hà Nội</p>
+                        <p class="mb-2">99 D. Vực Giang, Thôn 4, Thạch Thất, Hà Nội</p>
+                        <p class="mb-2">Phone: 0376336788</p>
+                        <p>Email: tunghb2007@gmail.com</p>
+                    </address>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="mt-6">
+                        <h5 class="font-medium mb-2">Bản tin</h5>
+                        <div class="flex">
+                            <input type="email" placeholder="tunghb2007@gmail.com" class="px-3 py-2 bg-gray-700 text-white rounded-l focus:outline-none w-full">
+                            <button class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-r"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Nhà trọ LISO. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Form submission
+        const registrationForm = document.getElementById('registrationForm');
+        
+        registrationForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const fullName = document.getElementById('fullName').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const roomType = document.getElementById('roomType').value;
+            const moveInDate = document.getElementById('moveInDate').value;
+            
+            // Here you would typically send this data to a server
+            // For demo purposes, we'll just show an alert
+            alert(`Thank you, ${fullName}! Đăng ký của bạn đã được nhận. Chúng tôi sẽ liên hệ với bạn sớm nhất có thể. ${phone}.`);
+            
+            // Reset form
+            registrationForm.reset();
+            
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
